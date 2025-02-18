@@ -6,6 +6,7 @@ const envSchema = z.object({
   POSTGRES_PASSWORD: z.string(),
   POSTGRES_DB: z.string(),
   REDIS_URL: z.string().url(),
+  WEB_URL: z.string().url(),
 })
 
 export const env = envSchema.parse(process.env)
