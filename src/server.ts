@@ -8,8 +8,8 @@ import {
   serializerCompiler,
   validatorCompiler,
 } from 'fastify-type-provider-zod'
-import { subscribeToEventRoute } from '../routes/subscribe_to_event_route'
 import { env } from './env'
+import { subscribeToEventRoute } from './routes/subscribe_to_event_route'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
