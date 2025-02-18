@@ -1,13 +1,13 @@
-import { fastify } from 'fastify'
 import { fastifyCors } from '@fastify/cors'
-import {
-  validatorCompiler,
-  serializerCompiler,
-  ZodTypeProvider,
-  jsonSchemaTransform,
-} from 'fastify-type-provider-zod'
 import { fastifySwagger } from '@fastify/swagger'
 import { fastifySwaggerUi } from '@fastify/swagger-ui'
+import { fastify } from 'fastify'
+import {
+  type ZodTypeProvider,
+  jsonSchemaTransform,
+  serializerCompiler,
+  validatorCompiler,
+} from 'fastify-type-provider-zod'
 import { subscribeToEventRoute } from '../routes/subscribe_to_event_route'
 import { env } from './env'
 
@@ -17,7 +17,7 @@ app.setSerializerCompiler(serializerCompiler)
 app.setValidatorCompiler(validatorCompiler)
 
 app.register(fastifyCors, {
-  origin: true
+  origin: true,
 })
 
 app.register(fastifySwagger, {
