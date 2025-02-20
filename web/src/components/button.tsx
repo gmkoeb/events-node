@@ -1,12 +1,12 @@
-import { ComponentProps, ReactNode } from "react"
+import type { ComponentProps } from 'react'
 
 interface ButtonProps extends ComponentProps<'button'> {}
 
-export function Button(props: ButtonProps){
+export function Button(props: ButtonProps) {
   return (
-    <button 
+    <button
       className="flex justify-between items-center bg-gray-500 px-5 h-12 text-blue font-semibold rounded-xl w-full cursor-pointer transition-colors duration-300 hover:bg-blue hover:text-gray-900"
-      {...props}  
+      {...props}
     />
   )
 }
